@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:background="@drawable/casual_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnGoBack"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:scaleType="center"
+            app:srcCompat="@drawable/back_button" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnProfileActivity"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00FFFFFF"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            android:scaleType="center"
+            android:padding="10dp"
+            android:src="@drawable/profile_button" />
+
+        <Space
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnSettingsActivity"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="center"
+            app:srcCompat="@drawable/settings_button" />
+
+    </LinearLayout>
+
+    <com.example.itamusic.NotesView
+        android:id="@+id/notesView"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/notes_draw_bg" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnAnswer1"
+            android:layout_width="325dp"
+            android:layout_height="80dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+
+            app:srcCompat="@drawable/answer_1_button" />
+
+        <TextView
+            android:id="@+id/tvAnswer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"/>
+    </FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnAnswer2"
+            android:layout_width="325dp"
+            android:layout_height="80dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+
+            app:srcCompat="@drawable/answer_2_button" />
+
+        <TextView
+            android:id="@+id/tvAnswer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"/>
+    </FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnAnswer3"
+            android:layout_width="325dp"
+            android:layout_height="80dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+
+            app:srcCompat="@drawable/answer_3_button" />
+
+        <TextView
+            android:id="@+id/tvAnswer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"/>
+    </FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnAnswer4"
+            android:layout_width="325dp"
+            android:layout_height="80dp"
+            android:background="#00FFFFFF"
+            android:scaleType="fitXY"
+
+            app:srcCompat="@drawable/answer_4_button" />
+
+        <TextView
+            android:id="@+id/tvAnswer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"/>
+    </FrameLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:text="0"
+        android:textColor="#15E3D0"
+        android:textSize="48sp"
+        android:background="@drawable/score_bg"/>
+
+</LinearLayout>
+

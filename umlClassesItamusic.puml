@@ -1,0 +1,202 @@
+@startuml
+class com.example.itamusic.Message {
+~ String text
+~ boolean isUser
+}
+
+class com.example.itamusic.Stats {
+- int intervalListeningQuestions
+- int intervalListeningCorrect
+- int noteListeningQuestions
+- int noteListeningCorrect
+- int chordProgressionQuestions
+- int chordProgressionCorrect
+- int noteReadingQuestions
+- int noteReadingCorrect
++ void incrementIntervalListeningQuestions(boolean)
++ void incrementNoteListeningQuestions(boolean)
++ void incrementChordProgressionQuestions(boolean)
++ void incrementNoteReadingQuestions(boolean)
++ int getIntervalListeningQuestions()
++ int getIntervalListeningCorrect()
++ int getNoteListeningQuestions()
++ int getNoteListeningCorrect()
++ int getChordProgressionQuestions()
++ int getChordProgressionCorrect()
++ int getNoteReadingQuestions()
++ int getNoteReadingCorrect()
++ double getIntervalListeningSuccessRate()
++ double getNoteListeningSuccessRate()
++ double getChordProgressionSuccessRate()
++ double getNoteReadingSuccessRate()
+- double calculateSuccessRate(int,int)
+}
+
+
+class com.example.itamusic.NotesView {
+- Paint paint
+- Paint notePaint
+- Paint textPaint
+- List<String> notes
+- int startY
+- int lineSpacing
+- int staffWidth
+- void init(Context)
+# void onDraw(Canvas)
+- void drawTrebleSign(Canvas)
+- void drawNote(Canvas,String,int)
+- void drawWholeNoteSymbol(Canvas,int,int)
+- int getPitchPosition(String)
++ void addNote(String)
++ void clearNotes()
+}
+
+
+abstract class com.example.itamusic.Instrument {
+# String name
+# ArrayList<Note> notesList
++ String getName()
++ void setName(String)
++ ArrayList<Note> getNotesList()
++ void setNotesList(ArrayList<Note>)
++ ArrayList<String> getNotesNamesList()
++ void play(String)
+}
+
+
+class com.example.itamusic.FirebaseHelper {
+- {static} String TAG
+- DatabaseReference database
++ DatabaseReference getDatabase()
++ void uploadUserData(User)
++ void uploadUserStats(String,Stats)
++ void getUserById(String,UserCallback)
++ void getAllUsers(UsersCallback)
+}
+
+
+interface com.example.itamusic.FirebaseHelper$UserCallback {
+~ void onUserReceived(User)
+}
+
+interface com.example.itamusic.FirebaseHelper$UsersCallback {
+~ void onUsersReceived(ArrayList<User>)
+}
+
+class com.example.itamusic.Interval {
+- Note note1
+- Note note2
+- int halfTones
++ Note getNote1()
++ void setNote1(Note)
++ Note getNote2()
++ void setNote2(Note)
++ int getHalfTones()
++ void setHalfTones(int)
++ void play()
++ void play(int)
+}
+
+
+class com.example.itamusic.Guitar {
+- String name
+- ArrayList<Note> chordsList
+- Note EmChord
++ ArrayList<Note> getChordsList()
++ ArrayList<String> getChordsNamesList()
++ void playGuitarChord(String)
+}
+
+
+class com.example.itamusic.ChatAdapter {
+- List<Message> messages
+- Context context
++ ViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(ViewHolder,int)
++ int getItemViewType(int)
++ int getItemCount()
+- void copyToClipboard(String)
+}
+
+
+class com.example.itamusic.User {
+- String name
+- String id
+- String userName
+- String password
+- Stats stats
++ String getName()
++ void setName(String)
++ String getId()
++ void setId(String)
++ String getUserName()
++ void setUserName(String)
++ String getPassword()
++ void setPassword(String)
++ Stats getStats()
++ void setStats(Stats)
+}
+
+class com.example.itamusic.Note {
+- String name
+- int address
+- float leftVol
+- float rightVol
+- int priority
+- int loop
+- float rate
+- SoundPool mSoundPool
+- Context context
+- int sound
+- int halfTones
++ String getName()
++ void setName(String)
++ int getAddress()
++ void setAddress(int)
++ float getLeftVol()
++ void setLeftVol(float)
++ float getRightVol()
++ void setRightVol(float)
++ int getPriority()
++ void setPriority(int)
++ int getLoop()
++ void setLoop(int)
++ float getRate()
++ void setRate(float)
++ Context getContext()
++ void setContext(Context)
++ int getSound()
++ void setSound(int)
++ int getHalfTones()
++ void setHalfTones(int)
++ void play()
++ void play(int)
+}
+
+class com.example.itamusic.Piano {
+- String name
+- ArrayList<Note> notesList
+- Note cNote
++ ArrayList<Note> getNotesList()
++ ArrayList<String> getNotesNamesList()
++ void playPianoNote(String)
+}
+
+class com.example.itamusic.Drums {
+- String name
+- ArrayList<Note> notesList
+- Note cNote
++ ArrayList<Note> getNotesList()
++ ArrayList<String> getNotesNamesList()
++ void playDrumsNote(String)
+}
+
+java.io.Serializable <|.. com.example.itamusic.Stats
+android.view.View <|-- com.example.itamusic.NotesView
+com.example.itamusic.FirebaseHelper +.. com.example.itamusic.FirebaseHelper$UserCallback
+com.example.itamusic.FirebaseHelper +.. com.example.itamusic.FirebaseHelper$UsersCallback
+com.example.itamusic.Instrument <|-- com.example.itamusic.Guitar
+com.example.itamusic.Instrument <|-- com.example.itamusic.Drums
+java.io.Serializable <|.. com.example.itamusic.User
+com.example.itamusic.Instrument <|-- com.example.itamusic.Piano
+@enduml

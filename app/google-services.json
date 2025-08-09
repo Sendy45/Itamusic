@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1049848377783",
+    "project_id": "itamusic-ff2b3",
+    "firebase_url/": "https://itamusic-ff2b3-default-rtdb.firebaseio.com/",
+    "storage_bucket": "itamusic-ff2b3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049848377783:android:c37ca1fc13ff75c7413832",
+        "android_client_info": {
+          "package_name": "com.example.itamusic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhCJ04pGP_nUtAJGho8yJfkZLr-wIMzDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

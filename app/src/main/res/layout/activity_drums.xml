@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drums_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginEnd="2dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFloorTom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageButton
+            android:id="@+id/btnGoBack"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="16dp"
+            android:background="#00FFFFFF"
+            android:rotation="90"
+            app:srcCompat="@drawable/back_button" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnProfileActivity"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="16dp"
+            android:background="#00FFFFFF"
+            android:padding="10dp"
+            android:rotation="90"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            app:srcCompat="@drawable/profile_button" />
+
+        <Space
+            android:layout_width="89dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnSettingsActivity"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="#00FFFFFF"
+            android:rotation="90"
+            app:srcCompat="@drawable/settings_button" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivDrumsSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/drums_set" />
+
+    <ImageButton
+        android:id="@+id/btnBass"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="289dp"
+        android:layout_marginBottom="39dp"
+        android:background="#00FFFFFF"
+        android:rotation="90"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btnFloorTom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.481"
+        app:srcCompat="@drawable/bass_button" />
+
+    <ImageButton
+        android:id="@+id/btnSnare"
+        android:layout_width="149dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="16dp"
+        android:background="#00FFFFFF"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264"
+        app:srcCompat="@drawable/snare_button" />
+
+    <ImageButton
+        android:id="@+id/btnHighTom"
+        android:layout_width="91dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="176dp"
+        android:background="#00FFFFFF"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.555"
+        app:srcCompat="@drawable/hi_tom_button" />
+
+    <ImageButton
+        android:id="@+id/btnLowTom"
+        android:layout_width="95dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="172dp"
+        android:background="#00FFFFFF"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/medium_tom_button" />
+
+    <ImageButton
+        android:id="@+id/btnRide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:background="#00FFFFFF"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841"
+        app:srcCompat="@drawable/ride_button" />
+
+    <ImageButton
+        android:id="@+id/btnHiHats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:background="#00FFFFFF"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        app:srcCompat="@drawable/hi_hats_button" />
+
+    <ImageButton
+        android:id="@+id/btnCrash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:background="#00FFFFFF"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182"
+        app:srcCompat="@drawable/crash_button" />
+
+    <ImageButton
+        android:id="@+id/btnFloorTom"
+        android:layout_width="146dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="178dp"
+        android:background="#00FFFFFF"
+        android:rotation="90"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBass"
+        app:srcCompat="@drawable/floor_tom_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

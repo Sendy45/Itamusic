@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Itamusic</string>
+
+    <!-- Treble Clef (𝄞) -->
+    <string name="treble_clef">𝄞</string>
+
+    <!-- Whole Note (𝅝) -->
+    <string name="whole_note">𝅝</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

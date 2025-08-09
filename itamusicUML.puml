@@ -1,0 +1,292 @@
+@startuml
+class com.example.itamusic.NoteLessonActivity {
+* ImageButton btnGoBack
+* ImageView btnProfileActivity
+* NotesView notesView
+* ViewPager2 vpPage
+* ArrayList<String> pagesText
+* ArrayList<Object> pagesNotes
+* User user
+* FirebaseHelper firebaseHelper
+# void onCreate(Bundle)
+}
+
+
+class com.example.itamusic.GuitarActivity {
+* ImageButton btnEm
+* ImageView btnProfileActivity
+* Guitar guitar
+* User user
+* FirebaseHelper firebaseHelper
+* String activityDailyMission
+# void onCreate(Bundle)
+}
+
+
+class com.example.itamusic.TunerActivity {
+* TextView tvPitch
+* ImageButton btnGoBack
+* ImageView btnProfileActivity
+* User user
+* FirebaseHelper firebaseHelper
+* boolean RECORDING
+* ArrayList<Float> recordedPitches
+# void onCreate(Bundle)
++ void processPitch(float)
+* void processRecording()
+~ String getVoiceType(float,float)
+}
+
+class com.example.itamusic.HomeActivity {
+* BottomNavigationView bottomNavigationView
+* ImageButton btnSettingsActivity
+* ImageView btnProfileActivity
+* User user
+* FirebaseHelper firebaseHelper
+* int currentFragmentIndex
+# void onCreate(Bundle)
++ void replaceFragment(Fragment)
+}
+
+
+class com.example.itamusic.MainActivity {
+* Button btnSignUp
+* ImageButton btnLogIn
+* EditText etName
+* Dialog signUpDialog
+* Bitmap profilePic
+* ArrayList<User> users
+* FirebaseHelper firebaseHelper
+# void onCreate(Bundle)
++ void createSignUpDialog()
+* boolean isUserExistingLogIn(String,String)
++ boolean isUserExistingSignUp(String,String,String)
+* User getUserByLogIn(String,String)
+* void logIn()
+# void onActivityResult(int,int,Intent)
++ {static} void applyClickAnimation(View)
+}
+
+
+class com.example.itamusic.SettingsActivity {
+* FrameLayout btnChangePic
+* ImageButton btnGoBack
+* ImageView btnProfileActivity
+* SeekBar sbVolume
+* EditText etNameInput
+* TextView tvTime
+* Button btnAccept
+* Dialog deleteAccountDialog
+* User user
+* FirebaseHelper firebaseHelper
+* MaterialTimePicker timePicker
+* Calendar calendar
+* AlarmManager alarmManager
+* PendingIntent pendingIntent
+# void onCreate(Bundle)
+* void createNotificationChannel()
+* void showTimePicker()
+* void setAlarm()
+* void cancelAlarm()
+* void changeUserName()
+* void resetStats()
+* void deleteAccount()
+* void manageNotifications()
+# void onActivityResult(int,int,Intent)
+}
+
+class com.example.itamusic.KeyLessonActivity {
+* ImageButton btnGoBack
+* ImageView btnProfileActivity
+* NotesView notesView
+* ViewPager2 vpPage
+* ArrayList<String> pagesText
+* ArrayList<Object> pagesNotes
+* User user
+* FirebaseHelper firebaseHelper
+# void onCreate(Bundle)
+}
+
+
+class com.example.itamusic.ChordLessonActivity {
+* ImageButton btnGoBack
+* ImageView btnProfileActivity
+* NotesView notesView
+* ViewPager2 vpPage
+* ArrayList<String> pagesText
+* ArrayList<Object> pagesNotes
+* User user
+* FirebaseHelper firebaseHelper
+# void onCreate(Bundle)
+}
+
+class com.example.itamusic.IntervalLessonActivity {
+* ImageButton btnGoBack
+* ImageView btnProfileActivity
+* NotesView notesView
+* ViewPager2 vpPage
+* ArrayList<String> pagesText
+* ArrayList<Object> pagesNotes
+* User user
+* FirebaseHelper firebaseHelper
+# void onCreate(Bundle)
+}
+
+
+class com.example.itamusic.IntervalTestActivity {
+* ImageButton btnAnswer1
+* ImageView btnProfileActivity
+* TextView tvAnswer1
+* Piano piano
+* ArrayList<TextView> textViewList
+* ArrayList<ImageButton> buttonList
+* int successCounter
+* User user
+* FirebaseHelper firebaseHelper
+* String activityDailyMission
+* Interval interval
+# void onCreate(Bundle)
++ void nextQuestion()
++ void checkAnswer(ArrayList<ImageButton>)
+}
+
+class com.example.itamusic.DrumsActivity {
+* ImageButton btnRide
+* ImageView btnProfileActivity
+* Drums drums
+* User user
+* FirebaseHelper firebaseHelper
+* String activityDailyMission
+# void onCreate(Bundle)
++ void shakeView(View)
++ void pulseOnHit(View)
+}
+
+class com.example.itamusic.KeyTestActivity {
+* ImageButton btnAnswer1
+* ImageView btnProfileActivity
+* TextView tvAnswer1
+* NotesView notesView
+* ArrayList<TextView> textViewList
+* ArrayList<ImageButton> buttonList
+* int successCounter
+* User user
+* FirebaseHelper firebaseHelper
+* String activityDailyMission
+# void onCreate(Bundle)
++ void nextQuestion()
++ void checkAnswer(ArrayList<ImageButton>)
+}
+
+class com.example.itamusic.NoteTestActivity {
+* ImageButton btnAnswer1
+* ImageView btnProfileActivity
+* TextView tvAnswer1
+* Piano piano
+* ArrayList<TextView> textViewList
+* ArrayList<ImageButton> buttonList
+* int successCounter
+* User user
+* FirebaseHelper firebaseHelper
+* String activityDailyMission
+* Note note
+# void onCreate(Bundle)
++ void nextQuestion()
++ void checkAnswer(ArrayList<ImageButton>)
+}
+
+
+class com.example.itamusic.ChatNotesActivity {
+* RecyclerView chatNotesRecyclerView
+* ChatNoteAdapter chatNoteAdapter
+* ArrayList<ChatNote> chatNotes
+* ImageButton btnGoBack
+* ImageView btnProfileActivity
+* User user
+* FirebaseHelper firebaseHelper
+# void onCreate(Bundle)
+* void updateRecyclerView()
+}
+
+
+class com.example.itamusic.ChordTestActivity {
+* ImageButton btnAnswer1
+* ImageView btnProfileActivity
+* TextView tvAnswer1
+* NotesView notesView
+* ArrayList<TextView> textViewList
+* ArrayList<ImageButton> buttonList
+* int successCounter
+* User user
+* FirebaseHelper firebaseHelper
+* String activityDailyMission
+# void onCreate(Bundle)
++ void nextQuestion()
++ void checkAnswer(ArrayList<ImageButton>)
+}
+class com.example.itamusic.PianoActivity {
+* Button c4
+* ImageButton btnGoBack
+* ImageView btnProfileActivity
+* User user
+* FirebaseHelper firebaseHelper
+* Piano piano
+* String activityDailyMission
+# void onCreate(Bundle)
++ void addPressEffect(View)
++ void releasePressEffect(View)
+}
+
+
+class com.example.itamusic.ProfileActivity {
+* TextView tvUserName
+* ImageButton btnGoBack
+* ImageView ivProfilePic
+* User user
+* FirebaseHelper firebaseHelper
+# void onCreate(Bundle)
+* void updateUI()
+}
+
+
+class com.example.itamusic.ChatBotActivity {
+* RecyclerView chatRecyclerView
+* ChatAdapter chatAdapter
+* ArrayList<Message> chatMessages
+* EditText etUserInput
+* Button btnCreate
+* ImageButton btnGoBack
+* ImageView btnProfileActivity
+* Dialog addChatNoteDialog
+* OkHttpClient client
+* {static} MediaType JSON
+* {static} String API_URL
+* {static} String API_KEY
+* User user
+* FirebaseHelper firebaseHelper
+* String activityDailyMission
+* boolean GOT_DAILY_MISSION
+# void onCreate(Bundle)
+* void addMessage(Message)
+* void sendMessageToAPI(String)
+}
+
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.NoteLessonActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.GuitarActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.TunerActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.HomeActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.SettingsActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.KeyLessonActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.ChordLessonActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.IntervalLessonActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.IntervalTestActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.NoteTestActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.ChatNotesActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.ChordTestActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.DrumsActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.KeyTestActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.PianoActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.ProfileActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.itamusic.ChatBotActivity
+@enduml

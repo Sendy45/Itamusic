@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/casual_bg"
+    tools:context=".TunerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnGoBack"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:scaleType="center"
+            app:srcCompat="@drawable/back_button" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnProfileActivity"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00FFFFFF"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            android:scaleType="center"
+            android:padding="10dp"
+            android:src="@drawable/profile_button" />
+
+        <Space
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnSettingsActivity"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="center"
+            app:srcCompat="@drawable/settings_button" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/normal_info_bg"
+        android:layout_margin="15dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:textColor="#FFFFFF"
+            android:textSize="60sp"
+            android:gravity="center"
+            android:background="@drawable/tuner_image"/>
+
+
+        <TextView
+            android:id="@+id/tvPitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:background="@drawable/tuner_hz_display"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/normal_info_bg"
+        android:layout_margin="15dp"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/btnRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/record_button"/>
+    </LinearLayout>
+
+</LinearLayout>

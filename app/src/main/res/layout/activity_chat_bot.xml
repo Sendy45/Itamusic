@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/casual_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnGoBack"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#00FFFFFF"
+            android:scaleType="center"
+            app:srcCompat="@drawable/back_button" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnProfileActivity"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#00FFFFFF"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            android:scaleType="center"
+            android:padding="10dp"
+            android:src="@drawable/profile_button" />
+
+        <Space
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnSettingsActivity"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:scaleType="center"
+            app:srcCompat="@drawable/settings_button" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layoutDirection="rtl"
+        android:gravity="end">
+
+        <ImageButton
+            android:id="@+id/btnSaveChatNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/save_chat_note_button"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/btnChatNotesActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/chat_notes_button"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkGray"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <EditText
+            android:id="@+id/etUserInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg"
+            android:hint="Type a message..."
+            android:maxLines="5"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:scrollbars="vertical"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:src="@drawable/send_button" />
+    </LinearLayout>
+
+</LinearLayout>

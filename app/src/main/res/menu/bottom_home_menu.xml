@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_ic"
+        android:title="" />
+
+    <item
+        android:id="@+id/instruments"
+        android:icon="@drawable/instruments_ic"
+        android:title=""/>
+
+    <item
+        android:id="@+id/exercises"
+        android:icon="@drawable/exercises_ic"
+        android:title=""/>
+
+    <item
+        android:id="@+id/lessons"
+        android:icon="@drawable/lessons_ic"
+        android:title=""/>
+
+</menu>

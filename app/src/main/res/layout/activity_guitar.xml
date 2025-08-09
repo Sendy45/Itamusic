@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/guitar_bg">
+
+    <LinearLayout
+        android:id="@+id/chordsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageButton
+                android:id="@+id/btnEm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:background="#00FFFFFF"
+                android:scaleType="fitXY"
+                android:src="@drawable/guitar_chord" />
+
+            <TextView
+                android:id="@+id/tvEm"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:rotation="90"
+                android:text="Em"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageButton
+                android:id="@+id/btnAm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:scaleType="fitXY"
+                android:background="#00FFFFFF"
+                android:src="@drawable/guitar_chord" />
+
+            <TextView
+                android:id="@+id/tvAm"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="Am"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:rotation="90"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageButton
+                android:id="@+id/btnDm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:scaleType="fitXY"
+                android:background="#00FFFFFF"
+                android:src="@drawable/guitar_chord" />
+
+            <TextView
+                android:id="@+id/tvDm"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="Dm"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:rotation="90"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageButton
+                android:id="@+id/btnG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:scaleType="fitXY"
+                android:background="#00FFFFFF"
+                android:src="@drawable/guitar_chord" />
+
+            <TextView
+                android:id="@+id/tvG"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="G"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:rotation="90"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageButton
+                android:id="@+id/btnC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:scaleType="fitXY"
+                android:background="#00FFFFFF"
+                android:src="@drawable/guitar_chord" />
+
+            <TextView
+                android:id="@+id/tvC"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="C"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:rotation="90"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageButton
+                android:id="@+id/btnF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:scaleType="fitXY"
+                android:background="#00FFFFFF"
+                android:src="@drawable/guitar_chord" />
+
+            <TextView
+                android:id="@+id/tvF"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="F"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:rotation="90"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageButton
+                android:id="@+id/btnBb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:scaleType="fitXY"
+                android:background="#00FFFFFF"
+                android:src="@drawable/guitar_chord" />
+
+            <TextView
+                android:id="@+id/tvBb"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="Bb"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:rotation="90"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <ImageButton
+                android:id="@+id/btnBdim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:background="#00FFFFFF"
+                android:scaleType="fitXY"
+                android:src="@drawable/guitar_chord" />
+
+            <TextView
+                android:id="@+id/tvBdim"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:rotation="90"
+                android:text="Bdim"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="2dp"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btnGoBack"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="16dp"
+            android:rotation="90"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/back_button"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnProfileActivity"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="16dp"
+            android:background="#00FFFFFF"
+            android:padding="10dp"
+            android:rotation="90"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            app:srcCompat="@drawable/profile_button" />
+
+        <Space
+            android:layout_width="89dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnSettingsActivity"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:rotation="90"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/settings_button"/>
+    </LinearLayout>
+</RelativeLayout>
